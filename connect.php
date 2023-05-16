@@ -1,9 +1,15 @@
 <?php
-define( 'dbhost' , 'localhost');
-define( 'dbuser' , 'root');
-define( 'dbpass' , '');
-define( 'dbname' , 'DonateDB');
+    $host = "localhost";
+    $user = "user";
+    $pass = "password";
+    $db = "donation";
 
-$conn = mysli_connect(dbhost, dbuser, dbpass) or die('unable to connect');
+  $conn = mysqli_connect("hostname", "username", "password", "database");
 
-?>
+    if ($conn) {
+        echo "connected to database";
+    }else {
+    echo "failed to connect" .mysqli_connect_error();
+    }
+
+    ?>
